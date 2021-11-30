@@ -1,10 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
+<html>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <!-- we import arjs version without NFT but with marker + location based support -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded arjs>
+      <a-marker id="animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA">
+        <a-entity
+          position="0 0 0"
+          scale="2 2 2"
+          rotation="270 0 0"
+          gltf-model="assets/shiba/scene.gltf"
+        ></a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
+
+<!-- <!doctype html>
 <html>
     <head>
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
         <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
+        
     </head>
 
     <body style="margin: 0; overflow: hidden;">
@@ -33,9 +61,16 @@
                     rotation="-90 0 0"
                     gesture-handler
                 ></a-image>
+<!--                 <a-entity
+        gltf-model="assets/shiba/scene.gltf"
+        scale="5 5 5"
+        position="50 150 0"
+      >
+      </a-entity> -->
             </a-marker>
 
             <a-entity camera></a-entity>
         </a-scene>
     </body>
 </html>
+ -->
