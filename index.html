@@ -5,10 +5,10 @@
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   <body style="margin : 0px; overflow: hidden;">
     <a-scene embedded arjs>
-      <a-marker id="animated-marker"
+      <a-marker id="animated-marker-a"
                 type="pattern"
                 preset="custom"
-                url="assets/marker.patt"
+                url="assets/a_marker.patt"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
@@ -20,57 +20,65 @@
           gltf-model="assets/shiba/scene.gltf"
         ></a-entity>
       </a-marker>
+      <a-marker id="animated-marker-b"
+                type="pattern"
+                preset="custom"
+                url="assets/b_marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerB">
+        <a-entity
+          position="0 0 0"
+          scale="2 2 2"
+          rotation="270 0 0"
+          gltf-model="assets/buster_drone/scene.gltf"
+        ></a-entity>
+      </a-marker>
+            <a-marker id="animated-marker-c"
+                type="pattern"
+                preset="custom"
+                url="assets/c_marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerC">
+        <a-entity
+          position="0 0 0"
+          scale="2 2 2"
+          rotation="270 0 0"
+          gltf-model="assets/black_dragon_with_idle_animation/scene.gltf"
+        ></a-entity>
+                          <a-marker id="animated-marker-d"
+                type="pattern"
+                preset="custom"
+                url="assets/d_marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerD">
+        <a-entity
+          position="0 0 0"
+          scale="2 2 2"
+          rotation="270 0 0"
+          gltf-model="assets/arcane_-_jinx/scene.gltf"
+        ></a-entity>
+                                                      <a-marker id="animated-marker-e"
+                type="pattern"
+                preset="custom"
+                url="assets/e_marker.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerE">
+        <a-entity
+          position="0 0 0"
+          scale="2 2 2"
+          rotation="270 0 0"
+          gltf-model="assets/shiba/scene.gltf"
+        ></a-entity>
+      </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
-
-<!-- <!doctype html>
-<html>
-    <head>
-        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
-        
-    </head>
-
-    <body style="margin: 0; overflow: hidden;">
-        <a-scene
-            vr-mode-ui="enabled: false;"
-            loading-screen="enabled: false;"
-            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-            id="scene"
-            embedded
-            gesture-detector
-        >
-            <a-marker
-                id="animated-marker"
-                type="pattern"
-                preset="custom"
-                url="assets/marker.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
-            >
-                <a-image
-                    src="assets/asset.png"
-                    scale="1 1 1"
-                    class="clickable"
-                    rotation="-90 0 0"
-                    gesture-handler
-                ></a-image>
-<!--                 <a-entity
-        gltf-model="assets/shiba/scene.gltf"
-        scale="5 5 5"
-        position="50 150 0"
-      >
-      </a-entity> -->
-            </a-marker>
-
-            <a-entity camera></a-entity>
-        </a-scene>
-    </body>
-</html>
- -->
